@@ -26,5 +26,8 @@ public class Item {
                 return false;
             }
         }
+        static int carry(Item item){ // updates current weight
+            return item.weight++;
+        }
     }
 }
