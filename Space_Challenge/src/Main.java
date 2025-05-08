@@ -14,10 +14,7 @@ public class Main {
 
         System.out.printf("(" + simulation.test + "," + Simulation.test2 + ")"); // TESTING CODE
 
-        for (int i = 1; i <= 5; i++) {
-
-
-            System.out.println("i = " + i);
-        }
+        Item item = new Item(); // TESTING CODE
+        System.out.println("result: " + item.weight); // TESTING CODE
     }
 }
