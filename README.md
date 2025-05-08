@@ -18,6 +18,8 @@ Phase-2.txt
 
 Comment. “Extract All Integers from the given String in Java.” _GeeksforGeeks_, 21 Nov. 2024, www.geeksforgeeks.org/extract-all-integers-from-the-given-string-in-java/. Accessed 8 May 2025.
 
+Ben Crazed Up Euden. "How to Take Numbers from a String and Put Them into an Arraylist." _Stack Overflow_, stackoverflow.com/questions/8701767/how-to-take-numbers-from-a-string-and-put-them-into-an-arraylist. Accessed 8 May 2025.
+
 “Java Pattern Class.” _GeeksforGeeks_, GeeksforGeeks, 15 Dec. 2024, www.geeksforgeeks.org/pattern-class-in-java/. Accessed 8 May 2025.
 
 “MLA Works Cited: Electronic Sources (Web Publications).” _MLA Works Cited: Electronic Sources - Purdue OWL® - Purdue University_, owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_works_cited_electronic_sources.html. Accessed 7 May 2025.
