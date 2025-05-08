@@ -24,13 +24,13 @@ public class Simulation {
             rocket1.add(line); // adds data from "Phase-1" text file to "rocket1" array list
         }
 
-        System.out.println("rocket1:\n"); // TESTING CODE
+        System.out.println("rocket1:"); // TESTING CODE
         for (String data : rocket1){ //
-            System.out.printf("text file test: " + data + "\n"); // TESTING CODE
+            System.out.printf(data + "\n"); // TESTING CODE
         }
-        System.out.println("rocket2:\n"); // TESTING CODE
+        System.out.println("\nrocket2:"); // TESTING CODE
         for (String data : rocket2){ //
-            System.out.printf("text file test: " + data + "\n"); // TESTING CODE
+            System.out.printf(data + "\n"); // TESTING CODE
         }
     }
 }
