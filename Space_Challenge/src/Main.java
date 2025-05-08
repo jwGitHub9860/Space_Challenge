@@ -16,7 +16,7 @@ public class Main {
         ArrayList<Integer> u1Rockets = new ArrayList<Integer>();
 
         Simulation.loadItems(file1, file2, itemList); // calls "loadItems" method
-        System.out.println("itemList:"); // TESTING CODE
+
 
 
         //System.out.println("result1: " + item.result1); // TESTING CODE

@@ -32,7 +32,7 @@ public class Simulation {
         while (matcher.find()){
             u1Rockets.add(String.valueOf(Integer.parseInt(matcher.group())));
         }
-
+        System.out.println("u1Rockets: " + u1Rockets); // TESTING CODE
         // Checks if U-1 Rocket exceeded its Max weight
         /*if (item.weight > 18000){ // USE DIVIDE EQUATION
             //
