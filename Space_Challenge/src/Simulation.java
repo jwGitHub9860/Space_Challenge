@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Simulation {
     Item item = new Item(); // creates "Items" object to access "Item.java" java file
@@ -20,5 +22,21 @@ public class Simulation {
         }
 
         return itemList;
+    }
+    public static ArrayList<String> loadU1(ArrayList<String> itemList, ArrayList<String> u1Rockets) {
+        // Make pattern to match integers
+        Pattern pattern = Pattern.compile("\\d+"); // COMPILES pattern "\\d+" - pattern used to Only Find Integers
+        Matcher matcher = pattern.matcher((CharSequence) itemList); // CREATES pattern for Matching & use (CharSequence) because "itemList" is an array list
+
+        // Extract ONLY ITEM WEIGHT AMOUNTS
+        while (matcher.find()){
+            u1Rockets.add(String.valueOf(Integer.parseInt(matcher.group())));
+        }
+
+        // Checks if U-1 Rocket exceeded its Max weight
+        /*if (item.weight > 18000){ // USE DIVIDE EQUATION
+            //
+        }*/
+        return u1Rockets;
     }
 }
