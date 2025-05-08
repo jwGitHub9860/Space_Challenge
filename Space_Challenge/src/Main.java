@@ -13,6 +13,7 @@ public class Main {
 
         // Create ArrayLists for rockets
         ArrayList<String> itemList = new ArrayList<String>();
+        ArrayList<Integer> u1Rockets = new ArrayList<Integer>();
 
         Simulation.loadItems(file1, file2, itemList); // calls "loadItems" method
         System.out.println("itemList:"); // TESTING CODE
