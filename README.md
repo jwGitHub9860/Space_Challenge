@@ -16,9 +16,11 @@ Phase-2.txt
 ## Credits
 ###### References used while making project
 
+Ben Crazed Up Euden. "How to Take Numbers from a String and Put Them into an Arraylist." _Stack Overflow_, stackoverflow.com/questions/8701767/how-to-take-numbers-from-a-string-and-put-them-into-an-arraylist. Accessed 8 May 2025.
+
 Comment. “Extract All Integers from the given String in Java.” _GeeksforGeeks_, 21 Nov. 2024, www.geeksforgeeks.org/extract-all-integers-from-the-given-string-in-java/. Accessed 8 May 2025.
 
-Ben Crazed Up Euden. "How to Take Numbers from a String and Put Them into an Arraylist." _Stack Overflow_, stackoverflow.com/questions/8701767/how-to-take-numbers-from-a-string-and-put-them-into-an-arraylist. Accessed 8 May 2025.
+Extract Digits from String - Stringutils Java - Stack Overflow, stackoverflow.com/questions/14974033/extract-digits-from-string-stringutils-java. Accessed 8 May 2025.
 
 “Java Pattern Class.” _GeeksforGeeks_, GeeksforGeeks, 15 Dec. 2024, www.geeksforgeeks.org/pattern-class-in-java/. Accessed 8 May 2025.
 
