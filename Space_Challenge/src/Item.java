@@ -3,6 +3,8 @@ import java.util.Random;
 public class Item {
     String name;
     int weight;
+    int result1; // TESTING CODE
+    int result2; // TESTING CODE
     public static class Rocket implements Spaceship {
         int test5 = 10; // TESTING CODE
         public boolean launch(int test5){ // indicates if "launch" was Successful or Not
