@@ -11,24 +11,23 @@ public class Simulation {
         final RandomAccessFile phase2 = new RandomAccessFile(file2, "r"); // creates a random access file stream to read from
 
         // Create ArrayLists for rockets
-        ArrayList<String> rocket1 = new ArrayList<String>();
-        ArrayList<String> rocket2 = new ArrayList<String>();
+        ArrayList<String> itemList = new ArrayList<String>();
 
         // Reads data in "Phase-1" and "Phase-2" text files
         String line;
         while ((line = phase1.readLine()) != null) {
-            rocket1.add(line); // adds data from "Phase-1" text file to "rocket1" array list
+            itemList.add(line); // adds data from "Phase-1" text file to "itemList" array list
         }
         while ((line = phase2.readLine()) != null) {
-            rocket2.add(line); // adds data from "Phase-1" text file to "rocket1" array list
+            itemList.add(line); // adds data from "Phase-1" text file to "itemList" array list
         }
 
-        System.out.println("rocket1:"); // TESTING CODE
-        for (String data : rocket1){ //
+        System.out.println("itemList:"); // TESTING CODE
+        for (String data : itemList){ //
             System.out.printf(data + "\n"); // TESTING CODE
         }
-        System.out.println("\nrocket2:"); // TESTING CODE
-        for (String data : rocket2){ //
+        System.out.println("\nitemList:"); // TESTING CODE
+        for (String data : itemList){ //
             System.out.printf(data + "\n"); // TESTING CODE
         }
     }
