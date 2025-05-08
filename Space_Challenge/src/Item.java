@@ -5,24 +5,24 @@ public class Item {
     int weight;
     public class Rocket implements Spaceship {
         int test5 = 10; // TESTING CODE
-        public boolean launch(Simulation simulation){ // indicates if "launch" was Successful or Not
-            if (simulation.test == 10){ //  MUST if STATEMENT CONDITION
+        public boolean launch(int test5){ // indicates if "launch" was Successful or Not
+            if (test5 == 10){ //  MUST if STATEMENT CONDITION
                 return true;
             }
             else{
                 return false;
             }
         }
-        public boolean land(Simulation simulation){ // indicates if "land" was Successful or Not through "launch" result
-            if (simulation.test == 10){ //  MUST if STATEMENT CONDITION
+        public boolean land(int test5){ // indicates if "land" was Successful or Not through "launch" result
+            if (test5 == 10){ //  MUST if STATEMENT CONDITION
                 return true;
             }
             else {
                 return false;
             }
         }
-        public boolean canCarry(Simulation simulation){
-            if (simulation.test == 10){ //  MUST if STATEMENT CONDITION
+        public boolean canCarry(int test5){
+            if (test5 == 10){ //  MUST if STATEMENT CONDITION
                 return true;
             }
             else {
@@ -34,9 +34,9 @@ public class Item {
         }
     }
     public interface Spaceship {
-        boolean launch(Simulation simulation); // indicates if "launch" was Successful or Not
-        boolean land(Simulation simulation); // indicates if "land" was Successful or Not through "launch" result
-        boolean canCarry(Simulation simulation);
+        boolean launch(int test5); // indicates if "launch" was Successful or Not
+        boolean land(int test5); // indicates if "land" was Successful or Not through "launch" result
+        boolean canCarry(int test5);
         int carry(Item item); // updates current weight
     }
     public class U1 extends Rocket{
