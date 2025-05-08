@@ -12,7 +12,7 @@ public class Main {
         final RandomAccessFile phase1 = new RandomAccessFile(file1, "r"); // creates a random access file stream to read from
         final RandomAccessFile phase2 = new RandomAccessFile(file2, "r"); // creates a random access file stream to read from
 
-
+        Simulation.loadItems(file1, file2); // calls "loadItems" method
 
 
         //System.out.println("result1: " + item.result1); // TESTING CODE
