@@ -21,10 +21,10 @@ public class Simulation {
         // Reads data in "Phase-1" and "Phase-2" text files
         String line;
         while ((line = phase1.readLine()) != null) {
-            //System.out.println(line); // TESTING CODE
             rocket1.add(line); // adds data from "Phase-1" text file to "rocket1" array list
         }
 
+        System.out.println("rocket1:\n"); // TESTING CODE
         for (String data : rocket1){ //
             System.out.printf("text file test: " + data + "\n"); // TESTING CODE
         }
