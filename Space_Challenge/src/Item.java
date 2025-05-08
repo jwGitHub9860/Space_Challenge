@@ -3,7 +3,7 @@ import java.util.Random;
 public class Item {
     String name;
     int weight;
-    public class Rocket implements Spaceship {
+    public static class Rocket implements Spaceship {
         int test5 = 10; // TESTING CODE
         public boolean launch(int test5){ // indicates if "launch" was Successful or Not
             if (test5 == 10){ //  MUST if STATEMENT CONDITION
