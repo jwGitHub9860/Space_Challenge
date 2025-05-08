@@ -4,7 +4,7 @@ import java.io.RandomAccessFile;
 
 public class Main {
     public static void main(String[] args) throws IOException { // if file CANNOT be opened
-        Simulation simulation = new Simulation(); // access "Simulation.java" java file
+        Simulation simulation = new Simulation(); // creates "Simulation" object to access "Simulation.java" java file
 
         // Access "Phase-1" and "Phase-2" text files
         File file1 = new File("C:\\Users\\jwori\\JavaProjects\\Phase-1.txt"); // access "Phase-1" text file
@@ -14,8 +14,8 @@ public class Main {
 
         System.out.printf("(" + simulation.test + "," + Simulation.test2 + ")" + "\n\n"); // TESTING CODE
 
-        Item item = new Item(); // TESTING CODE
-        System.out.println("result1: " + item.result1); // TESTING CODE
-        System.out.println("result2: " + item.result2 + "\n"); // TESTING CODE
+
+        //System.out.println("result1: " + item.result1); // TESTING CODE
+        //System.out.println("result2: " + item.result2 + "\n"); // TESTING CODE
     }
 }
