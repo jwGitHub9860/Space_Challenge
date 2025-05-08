@@ -28,6 +28,7 @@ public class Simulation {
         for (String data : rocket1){ //
             System.out.printf("text file test: " + data + "\n"); // TESTING CODE
         }
+        System.out.println("rocket2:\n"); // TESTING CODE
         for (String data : rocket2){ //
             System.out.printf("text file test: " + data + "\n"); // TESTING CODE
         }
