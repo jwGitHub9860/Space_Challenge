@@ -4,6 +4,7 @@ public class Item {
     String name;
     int weight;
     public class Rocket implements Spaceship {
+        int test5 = 10; // TESTING CODE
         public boolean launch(Simulation simulation){ // indicates if "launch" was Successful or Not
             if (simulation.test == 10){ //  MUST if STATEMENT CONDITION
                 return true;
