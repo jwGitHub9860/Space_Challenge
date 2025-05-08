@@ -22,13 +22,6 @@ public class Simulation {
             itemList.add(line); // adds data from "Phase-1" text file to "itemList" array list
         }
 
-        System.out.println("itemList:"); // TESTING CODE
-        for (String data : itemList){ //
-            System.out.printf(data + "\n"); // TESTING CODE
-        }
-        System.out.println("\nitemList:"); // TESTING CODE
-        for (String data : itemList){ //
-            System.out.printf(data + "\n"); // TESTING CODE
-        }
+        return itemList;
     }
 }
