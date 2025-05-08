@@ -23,14 +23,14 @@ public class Simulation {
 
         return itemList;
     }
-    public static ArrayList<String> loadU1(ArrayList<String> itemList, ArrayList<String> u1Rockets) {
+    public static ArrayList<Integer> loadU1(ArrayList<String> itemList, ArrayList<Integer> u1Rockets) {
         // Make pattern to match integers
         Pattern pattern = Pattern.compile("\\d+"); // COMPILES pattern "\\d+" - pattern used to Only Find Integers
         Matcher matcher = pattern.matcher((CharSequence) itemList); // CREATES pattern for Matching & use (CharSequence) because "itemList" is an array list
 
         // Extract ONLY ITEM WEIGHT AMOUNTS
         while (matcher.find()){
-            u1Rockets.add(String.valueOf(Integer.parseInt(matcher.group())));
+            u1Rockets.add(Integer.parseInt(matcher.group()));
         }
         System.out.println("u1Rockets: " + u1Rockets); // TESTING CODE
         // Checks if U-1 Rocket exceeded its Max weight
