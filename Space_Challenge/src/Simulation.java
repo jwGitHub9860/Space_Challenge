@@ -14,15 +14,15 @@ public class Simulation {
         String rocket1_item = phase1.readLine(); // reads data in "Phase-1" text files
         String rocket2_item = phase2.readLine(); // reads data in "Phase-2" text files
 
+        // Create ArrayLists for rockets
+        ArrayList<String> rocket1 = new ArrayList<String>();
+        ArrayList<String> rocket2 = new ArrayList<String>();
+
         // Reads data in "Phase-1" and "Phase-2" text files
         String line;
         while ((line = phase1.readLine()) != null) {
             System.out.println(line); // TESTING CODE
         }
-
-        // Create ArrayLists for rockets
-        ArrayList<String> rocket1 = new ArrayList<String>();
-        ArrayList<String> rocket2 = new ArrayList<String>();
 
         for (String data : rocket1){ //
             System.out.printf("text file test: " + phase1 + "\n"); // TESTING CODE
