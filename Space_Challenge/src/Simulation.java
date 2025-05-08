@@ -9,6 +9,8 @@ public class Simulation {
         final RandomAccessFile phase1 = new RandomAccessFile(file1, "r"); // creates a random access file stream to read from
         final RandomAccessFile phase2 = new RandomAccessFile(file2, "r"); // creates a random access file stream to read from
 
+        ArrayList<String> rocket1 = new ArrayList<String>();
+        ArrayList<String> rocket2 = new ArrayList<String>();
         for (String data : rocket1){ //
             System.out.printf("text file test: " + data + "\n"); // TESTING CODE
         }
