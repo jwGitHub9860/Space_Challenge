@@ -22,6 +22,7 @@ public class Simulation {
         String line;
         while ((line = phase1.readLine()) != null) {
             System.out.println(line); // TESTING CODE
+            rocket1.add(line); // adds data from "Phase-1" text file to "rocket1" array list
         }
 
         for (String data : rocket1){ //
