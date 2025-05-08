@@ -16,6 +16,10 @@ Phase-2.txt
 ## Credits
 ###### References used while making project
 
+Comment. “Extract All Integers from the given String in Java.” _GeeksforGeeks_, 21 Nov. 2024, www.geeksforgeeks.org/extract-all-integers-from-the-given-string-in-java/. Accessed 8 May 2025.
+
+“Java Pattern Class.” _GeeksforGeeks_, GeeksforGeeks, 15 Dec. 2024, www.geeksforgeeks.org/pattern-class-in-java/. Accessed 8 May 2025.
+
 “MLA Works Cited: Electronic Sources (Web Publications).” _MLA Works Cited: Electronic Sources - Purdue OWL® - Purdue University_, owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_works_cited_electronic_sources.html. Accessed 7 May 2025.
 
 Mus. “Java Generate Random Number between Two given Values - Stack Overflow.” _Stack Overflow_, 11 Mar. 2011, stackoverflow.com/questions/5271598/java-generate-random-number-between-two-given-values. Accessed 7 May 2025.
