@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Item {
     String name;
     int weight;
@@ -42,6 +44,10 @@ public class Item {
         int max_weight = 18; // Tonnes (with cargo)
         int launch_explosion_chance = 5; // % * (cargo carried / cargo limit)
         int landing_crash_chance = 1; // % * (cargo carried / cargo limit)
+
+        // Determines if "U-1" rocket will crash, explode, or neither
+        Random r = new Random(); // creates "Random" object
+        int result = r.nextInt(100) + 1; // "+ 1" ensures number will be within range of "0-100"
     }
     public class U2 extends Rocket{
         int cost = 120; // in Millions $
@@ -49,5 +55,9 @@ public class Item {
         int max_weight = 29; // Tonnes (with cargo)
         int launch_explosion_chance = 4; // % * (cargo carried / cargo limit)
         int landing_crash_chance = 8; // % * (cargo carried / cargo limit)
+
+        // Determines if "U-2" rocket will crash, explode, or neither
+        Random r = new Random(); // creates "Random" object
+        int result = r.nextInt(100) + 1; // "+ 1" ensures number will be within range of "0-100"
     }
 }
