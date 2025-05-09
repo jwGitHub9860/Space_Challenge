@@ -3,8 +3,7 @@ import java.util.Random;
 public class Item {
     String name;
     int weight;
-    int result1; // TESTING CODE
-    int result2; // TESTING CODE
+    Rocket rocket = new Rocket();  // creates "Rocket" object to access "Rocket" class in "Simulation.java" java file
     public static class Rocket implements Spaceship {
         int test5 = 10; // TESTING CODE
         public boolean launch(int test5){ // indicates if "launch" was Successful or Not
@@ -23,28 +22,29 @@ public class Item {
                 return false;
             }
         }
-        public boolean canCarry(int test5){
-            if (test5 == 10){ //  MUST if STATEMENT CONDITION
+        public boolean canCarry(int num, int weight, int max_weight){
+            if (weight >= max_weight){ //  MUST if STATEMENT CONDITION
                 return true;
             }
             else {
                 return false;
             }
         }
-        public int carry(Item item){ // updates current weight
-            return item.weight++;
+        public int carry(int num, int weight){ // updates current weight
+            weight += num;
+            return weight;
         }
     }
     public interface Spaceship {
         boolean launch(int test5); // indicates if "launch" was Successful or Not
         boolean land(int test5); // indicates if "land" was Successful or Not through "launch" result
-        boolean canCarry(int test5);
-        int carry(Item item); // updates current weight
+        boolean canCarry(int num, int weight, int max_weight);
+        int carry(int num, int weight); // updates current weight
     }
     public class U1 extends Rocket{
         int cost = 100; // in Millions $
-        int weight = 10; // Tonnes
-        int max_weight = 18; // Tonnes (with cargo)
+        int initial_rocket_weight = 10000; // (10 Tonnes) - initial rocket weight total WITH WEIGHT OF ROCKET BY ITSELF
+        int max_weight = 18000; // 18 Tonnes (with cargo)
         int launch_explosion_chance = 5; // % * (cargo carried / cargo limit)
         int landing_crash_chance = 1; // % * (cargo carried / cargo limit)
 
