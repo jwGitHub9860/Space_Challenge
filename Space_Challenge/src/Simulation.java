@@ -24,15 +24,11 @@ public class Simulation {
         return itemList;
     }
     public static ArrayList<Integer> loadU1(ArrayList<String> itemList, ArrayList<Integer> u1Rockets) {
-        // Make pattern to match integers
-        Pattern pattern = Pattern.compile("\\d+"); // COMPILES pattern "\\d+" - pattern used to Only Find Integers
-        Matcher matcher = pattern.matcher((CharSequence) itemList); // CREATES pattern for Matching & use (CharSequence) because "itemList" is an array list
-
-        // Extract ONLY ITEM WEIGHT AMOUNTS
-        while (matcher.find()){
-            u1Rockets.add(Integer.parseInt(matcher.group()));
+        // Extract ONLY ITEM WEIGHT AMOUNTS & put them in "u1Rockets"
+        for (String line : itemList){
+            String data = line.replaceAll("[^0-9]", ""); // MUST REMOVE Letters from String BEFORE PUTTING them into ArrayList<Integer> or Error Will Occur
+            u1Rockets.add(Integer.parseInt(data));
         }
-        System.out.println("u1Rockets: " + u1Rockets); // TESTING CODE
         // Checks if U-1 Rocket exceeded its Max weight
         /*if (item.weight > 18000){ // USE DIVIDE EQUATION
             //
