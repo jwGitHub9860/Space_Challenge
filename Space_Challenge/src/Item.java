@@ -23,7 +23,7 @@ public class Item {
             }
         }
         public boolean canCarry(int num, int weight, int max_weight){
-            if (weight >= max_weight){ //  MUST if STATEMENT CONDITION
+            if (weight <= max_weight){ //  MUST if STATEMENT CONDITION
                 return true;
             }
             else {
