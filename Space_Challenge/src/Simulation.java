@@ -71,7 +71,7 @@ public class Simulation {
         Item item = new Item(); // creates "Items" object to access "Item.java" java file
         boolean launchSuccess = false; // confirms if rocket launch was successful
 
-        for (int num = 0; num < /*u1RocketWeights.size()*/5; num++) {
+        for (int num = 0; num < u1RocketWeights.size(); num++) {
             launchSuccess = item.rocket.launch(); // calls "launch" method
             launchSuccess = item.rocket.land(); // calls "land" method
 
