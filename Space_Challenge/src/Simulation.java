@@ -70,7 +70,8 @@ public class Simulation {
     public static double runSimulation(ArrayList<Integer>rocketWeights, double rocketBudgetTotal){
         Item item = new Item(); // creates "Items" object to access "Item.java" java file
         boolean launchSuccess = false; // confirms if rocket launch was successful
-
+        System.out.println("launchSuccess: " + launchSuccess); // TESTING CODE
+        System.out.println("\nrocketWeights.size(): " + rocketWeights.size()); // TESTING CODE
         for (int num = 0; num < rocketWeights.size(); num++) {
             launchSuccess = item.rocket.launch(); // calls "launch" method
             launchSuccess = item.rocket.land(); // calls "land" method
