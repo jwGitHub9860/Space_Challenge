@@ -34,16 +34,19 @@ public class Simulation {
         // Checks if U-1 Rocket exceeded its Max weight
         int total_weight = 10000; // initial rocket weight total WITH WEIGHT OF ROCKET BY ITSELF
         for (int num : u1Rockets) {
+            System.out.println("Weight start: " + total_weight); // TESTING CODE
             total_weight += item.rocket.carry(num, total_weight);
             System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
             boolean allowCarry = item.rocket.canCarry(num, 10, 18000);
             System.out.println("Weight Allowed: " + total_weight); // TESTING CODE
             if (!allowCarry) {
+                System.out.println("Weight Before: " + total_weight); // TESTING CODE
                 total_weight -= num; // subtract weight that makes rocket weight exceed max weight
                 System.out.println("Weight Subtracted: " + total_weight); // TESTING CODE
                 u1RocketWeights.add(total_weight);
+                System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
                 total_weight = 10000; // changes rocket weight total Back To INITIAL Weight
-                System.out.println("Weight Subtracted: " + total_weight); // TESTING CODE
+                System.out.println("Weight Original: " + total_weight + "\n"); // TESTING CODE
             }
         }
         System.out.println(u1RocketWeights); // TESTING CODE
