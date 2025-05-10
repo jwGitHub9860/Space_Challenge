@@ -74,7 +74,7 @@ public class Simulation {
         System.out.println("\nrocketWeights.size(): " + rocketWeights.size()); // TESTING CODE
         for (int num = 0; num < rocketWeights.size(); num++) {
             launchSuccess = item.rocket.launch(); // calls "launch" method
-            launchSuccess = item.rocket.land(); // calls "land" method
+            landSuccess = item.rocket.land(); // calls "land" method
 
             while (!launchSuccess){
                 launchSuccess = item.rocket.launch(); // calls "launch" method
