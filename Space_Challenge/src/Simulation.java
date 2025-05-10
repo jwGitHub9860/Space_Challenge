@@ -76,7 +76,7 @@ public class Simulation {
             launchSuccess = item.rocket.launch(); // calls "launch" method
             launchSuccess = item.rocket.land(); // calls "land" method
 
-            while (launchSuccess){
+            while (!launchSuccess){
                 launchSuccess = item.rocket.launch(); // calls "launch" method
                 item.rocket.land(); // calls "land" method
             }
