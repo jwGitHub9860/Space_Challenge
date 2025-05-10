@@ -2,8 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.List;
 
 public class Simulation {
     public static ArrayList<String> loadItems(File file1, File file2, ArrayList<String> itemList) throws IOException {
@@ -53,6 +52,10 @@ public class Simulation {
             String data = line.replaceAll("[^0-9]", ""); // MUST REMOVE Letters from String BEFORE PUTTING them into ArrayList<Integer> or Error Will Occur
             u2Rockets.add(Integer.parseInt(data));
         }
+
+        // Split "u2Rockets" into new two array lists
+        List<Integer> u2RocketsPhase1 = u2Rockets.subList(0, 15);
+        List<Integer> u2RocketsPhase2 = u2Rockets.subList(15, u2Rockets.size());
 
         // Checks if U-2 Rocket exceeded its Max weight
         int total_weight = 18000; // initial rocket weight total WITH WEIGHT OF ROCKET BY ITSELF
