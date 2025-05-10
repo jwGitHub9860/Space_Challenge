@@ -80,5 +80,6 @@ public class Simulation {
                 item.rocket.land(); // calls "land" method
             }
         }
+        return rocketBudgetTotal;
     }
 }
