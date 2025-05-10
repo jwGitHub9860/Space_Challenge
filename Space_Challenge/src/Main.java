@@ -15,6 +15,8 @@ public class Main {
         ArrayList<String> itemList = new ArrayList<String>();
         ArrayList<Integer> u1Rockets = new ArrayList<Integer>();
         ArrayList<Integer> u1RocketWeights = new ArrayList<Integer>();
+        ArrayList<Integer> u2Rockets = new ArrayList<Integer>();
+        ArrayList<Integer> u2RocketWeights = new ArrayList<Integer>();
 
         Simulation.loadItems(file1, file2, itemList); // calls "loadItems" method
         Simulation.loadU1(itemList, u1Rockets, u1RocketWeights); // calls "loadU1" method
