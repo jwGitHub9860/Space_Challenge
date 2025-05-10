@@ -77,7 +77,7 @@ public class Simulation {
             launchSuccess = item.rocket.launch(); // calls "launch" method
             landSuccess = item.rocket.land(); // calls "land" method
 
-            int u1Cost = 100; // in Millions $
+            int u1Cost = 100000000; // in Millions $
             int initial_rocket_weight = 10000; // (10 Tonnes) - initial rocket weight total WITH WEIGHT OF ROCKET BY ITSELF
             int max_weight = 18000; // 18 Tonnes (with cargo)
 
