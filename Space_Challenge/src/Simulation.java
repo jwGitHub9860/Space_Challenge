@@ -55,4 +55,37 @@ public class Simulation {
         System.out.println(u1RocketWeights); // TESTING CODE
         return u1RocketWeights;
     }
+    public static ArrayList<Integer> loadU2(ArrayList<String> itemList, ArrayList<Integer> u2Rockets, ArrayList<Integer> u2RocketWeights) {
+        Item item = new Item(); // creates "Items" object to access "Item.java" java file
+
+        // Extract ONLY ITEM WEIGHT AMOUNTS & put them in "u2Rockets"
+        for (String line : itemList){
+            String data = line.replaceAll("[^0-9]", ""); // MUST REMOVE Letters from String BEFORE PUTTING them into ArrayList<Integer> or Error Will Occur
+            u2Rockets.add(Integer.parseInt(data));
+        }
+
+        // Checks if U-2 Rocket exceeded its Max weight
+        int total_weight = 18000; // initial rocket weight total WITH WEIGHT OF ROCKET BY ITSELF
+        for (int num : u2Rockets) {
+            System.out.println("Weight start: " + total_weight); // TESTING CODE
+            //System.out.println("num: " + num); // TESTING CODE
+            total_weight = item.rocket.carry(num, total_weight);
+            System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
+            boolean allowCarry = item.rocket.canCarry(total_weight, 29000);
+            System.out.println("Weight Allowed: " + total_weight); // TESTING CODE
+            System.out.println(allowCarry); // TESTING CODE
+            if (!allowCarry) {
+                System.out.println("Weight Before: " + total_weight); // TESTING CODE
+                total_weight -= num; // subtract weight that makes rocket weight exceed max weight
+                System.out.println("Weight Subtracted: " + total_weight); // TESTING CODE
+                u2RocketWeights.add(total_weight);
+                System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
+                total_weight = 18000 + num; // changes rocket weight total Back To INITIAL Weight
+                System.out.println("Weight Original: " + total_weight + "\n"); // TESTING CODE
+            }
+        }
+        u2RocketWeights.add(total_weight); // adds last U-2 rocket weight to "u2RocketWeights"
+        System.out.println(u2RocketWeights); // TESTING CODE
+        return u2RocketWeights;
+    }
 }
