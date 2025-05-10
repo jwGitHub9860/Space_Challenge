@@ -57,25 +57,15 @@ public class Simulation {
         // Checks if U-2 Rocket exceeded its Max weight
         int total_weight = 18000; // initial rocket weight total WITH WEIGHT OF ROCKET BY ITSELF
         for (int num : u2Rockets) {
-            System.out.println("Weight start: " + total_weight); // TESTING CODE
-            //System.out.println("num: " + num); // TESTING CODE
             total_weight = item.rocket.carry(num, total_weight);
-            System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
             boolean allowCarry = item.rocket.canCarry(total_weight, 29000);
-            System.out.println("Weight Allowed: " + total_weight); // TESTING CODE
-            System.out.println(allowCarry); // TESTING CODE
             if (!allowCarry) {
-                System.out.println("Weight Before: " + total_weight); // TESTING CODE
                 total_weight -= num; // subtract weight that makes rocket weight exceed max weight
-                System.out.println("Weight Subtracted: " + total_weight); // TESTING CODE
                 u2RocketWeights.add(total_weight);
-                System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
                 total_weight = 18000 + num; // changes rocket weight total Back To INITIAL Weight
-                System.out.println("Weight Original: " + total_weight + "\n"); // TESTING CODE
             }
         }
         u2RocketWeights.add(total_weight); // adds last U-2 rocket weight to "u2RocketWeights"
-        System.out.println(u2RocketWeights); // TESTING CODE
         return u2RocketWeights;
     }
 }
