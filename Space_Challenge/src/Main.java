@@ -17,7 +17,6 @@ public class Main {
         ArrayList<Integer> u1RocketWeights = new ArrayList<Integer>(); // holds weights of each U-1 rocket needed
         ArrayList<Integer> u2Rockets = new ArrayList<Integer>();
         ArrayList<Integer> u2RocketWeights = new ArrayList<Integer>(); // holds weights of each U-2 rocket needed
-        ArrayList<Double> rocketBudgetTotals = new ArrayList<Double>(); // holds budget totals of U-1 and U-2 rockets
 
         // Create Doubles for rocket budgets
         double u1BudgetTotal = 0;
