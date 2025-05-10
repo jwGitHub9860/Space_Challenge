@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Simulation {
     public static ArrayList<String> loadItems(File file1, File file2, ArrayList<String> itemList) throws IOException {
@@ -65,5 +66,19 @@ public class Simulation {
         }
         u2RocketWeights.add(total_weight); // adds last U-2 rocket weight to "u2RocketWeights"
         return u2RocketWeights;
+    }
+    public static void runSimulation(ArrayList<Integer>u1RocketWeights, ArrayList<Integer> u2RocketWeights, double u1BudgetTotal, double u2BudgetTotal){
+        Item item = new Item(); // creates "Items" object to access "Item.java" java file
+        boolean launchSuccess = false; // confirms if rocket launch was successful
+
+        for (int num = 0; num < /*u1RocketWeights.size()*/5; num++) {
+            launchSuccess = item.rocket.launch(); // calls "launch" method
+            launchSuccess = item.rocket.land(); // calls "land" method
+
+            while (launchSuccess){
+                launchSuccess = item.rocket.launch(); // calls "launch" method
+                item.rocket.land(); // calls "land" method
+            }
+        }
     }
 }
