@@ -22,8 +22,8 @@ public class Item {
                 return false;
             }
         }
-        public boolean canCarry(int num, int weight, int max_weight){
-            if (weight <= max_weight){ //  MUST if STATEMENT CONDITION
+        public boolean canCarry(int weight, int max_weight){ // checks if total rocket weight exceeds maximum weight limit
+            if (weight <= max_weight){
                 return true;
             }
             else {
@@ -38,7 +38,7 @@ public class Item {
     public interface Spaceship {
         boolean launch(int test5); // indicates if "launch" was Successful or Not
         boolean land(int test5); // indicates if "land" was Successful or Not through "launch" result
-        boolean canCarry(int num, int weight, int max_weight);
+        boolean canCarry(int weight, int max_weight);
         int carry(int num, int weight); // updates current weight
     }
     public class U1 extends Rocket{
