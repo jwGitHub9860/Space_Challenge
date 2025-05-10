@@ -53,15 +53,15 @@ public class Simulation {
             u2Rockets.add(Integer.parseInt(data));
         }
 
-        // Split "u2Rockets" into new two array lists
+        // Split "u2Rockets" into two new lists
         List<Integer> u2RocketsPhase1 = u2Rockets.subList(0, 15);
         List<Integer> u2RocketsPhase2 = u2Rockets.subList(15, u2Rockets.size());
+        System.out.println("u2RocketsPhase1: " + u2RocketsPhase1 + "\nu2RocketsPhase2: " + u2RocketsPhase2); // TESTING CODE
 
         // Checks if U-2 Rocket exceeded its Max weight
         int total_weight = 18000; // initial rocket weight total WITH WEIGHT OF ROCKET BY ITSELF
         for (int num : u2Rockets) {
             System.out.println("Weight start: " + total_weight); // TESTING CODE
-            //System.out.println("num: " + num); // TESTING CODE
             total_weight = item.rocket.carry(num, total_weight);
             System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
             boolean allowCarry = item.rocket.canCarry(total_weight, 29000);
