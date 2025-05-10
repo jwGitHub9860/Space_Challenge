@@ -27,3 +27,5 @@ Comment. “Extract All Integers from the given String in Java.” _GeeksforGeek
 Mus. “Java Generate Random Number between Two given Values - Stack Overflow.” _Stack Overflow_, 11 Mar. 2011, stackoverflow.com/questions/5271598/java-generate-random-number-between-two-given-values. Accessed 7 May 2025.
 
 NinaNa. "Extract Digits from String - Stringutils Java." _Stack Overflow_, stackoverflow.com/questions/14974033/extract-digits-from-string-stringutils-java. Accessed 8 May 2025.
+
+“Split a List into Two Halves in Java.” _GeeksforGeeks_, GeeksforGeeks, 10 Aug. 2022, www.geeksforgeeks.org/split-a-list-into-two-halves-in-java/. Accessed 9 May 2025.
