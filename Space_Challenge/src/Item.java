@@ -31,9 +31,6 @@ public class Item {
         int carry(int num, int weight); // updates current weight
     }
     public class U1 extends Rocket{
-        int cost = 100; // in Millions $
-        int initial_rocket_weight = 10000; // (10 Tonnes) - initial rocket weight total WITH WEIGHT OF ROCKET BY ITSELF
-        int max_weight = 18000; // 18 Tonnes (with cargo)
         int launch_explosion_chance = 5; // % * (cargo carried / cargo limit)
         int landing_crash_chance = 1; // % * (cargo carried / cargo limit)
 
