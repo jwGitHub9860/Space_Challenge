@@ -2,7 +2,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Simulation {
     public static ArrayList<String> loadItems(File file1, File file2, ArrayList<String> itemList) throws IOException {
@@ -53,51 +54,28 @@ public class Simulation {
             u2Rockets.add(Integer.parseInt(data));
         }
 
-        // Split "u2Rockets" into two new lists
-        List<Integer> u2RocketsPhase1 = u2Rockets.subList(0, 15);
-        List<Integer> u2RocketsPhase2 = u2Rockets.subList(15, u2Rockets.size());
-        System.out.println("u2RocketsPhase1: " + u2RocketsPhase1 + "\nu2RocketsPhase2: " + u2RocketsPhase2); // TESTING CODE
-
         // Checks if U-2 Rocket exceeded its Max weight
         int total_weight = 18000; // initial rocket weight total WITH WEIGHT OF ROCKET BY ITSELF
-        for (int num : u2RocketsPhase1) {
-            //System.out.println("Weight start: " + total_weight); // TESTING CODE
+        for (int num : u2Rockets) {
+            System.out.println("Weight start: " + total_weight); // TESTING CODE
+            //System.out.println("num: " + num); // TESTING CODE
             total_weight = item.rocket.carry(num, total_weight);
-            //System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
+            System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
             boolean allowCarry = item.rocket.canCarry(total_weight, 29000);
-            //System.out.println("Weight Allowed: " + total_weight); // TESTING CODE
-            //System.out.println(allowCarry); // TESTING CODE
+            System.out.println("Weight Allowed: " + total_weight); // TESTING CODE
+            System.out.println(allowCarry); // TESTING CODE
             if (!allowCarry) {
-                //System.out.println("Weight Before: " + total_weight); // TESTING CODE
+                System.out.println("Weight Before: " + total_weight); // TESTING CODE
                 total_weight -= num; // subtract weight that makes rocket weight exceed max weight
-                //System.out.println("Weight Subtracted: " + total_weight); // TESTING CODE
+                System.out.println("Weight Subtracted: " + total_weight); // TESTING CODE
                 u2RocketWeights.add(total_weight);
-                //System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
+                System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
                 total_weight = 18000 + num; // changes rocket weight total Back To INITIAL Weight
-                //System.out.println("Weight Original: " + total_weight + "\n"); // TESTING CODE
+                System.out.println("Weight Original: " + total_weight + "\n"); // TESTING CODE
             }
         }
         u2RocketWeights.add(total_weight); // adds last U-2 rocket weight to "u2RocketWeights"
-        System.out.println("Phase 1: " + u2RocketWeights); // TESTING CODE
-        for (int num : u2RocketsPhase2) {
-            //System.out.println("Weight start: " + total_weight); // TESTING CODE
-            total_weight = item.rocket.carry(num, total_weight);
-            //System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
-            boolean allowCarry = item.rocket.canCarry(total_weight, 29000);
-            //System.out.println("Weight Allowed: " + total_weight); // TESTING CODE
-            //System.out.println(allowCarry); // TESTING CODE
-            if (!allowCarry) {
-                //System.out.println("Weight Before: " + total_weight); // TESTING CODE
-                total_weight -= num; // subtract weight that makes rocket weight exceed max weight
-                //System.out.println("Weight Subtracted: " + total_weight); // TESTING CODE
-                u2RocketWeights.add(total_weight);
-                //System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
-                total_weight = 18000 + num; // changes rocket weight total Back To INITIAL Weight
-                //System.out.println("Weight Original: " + total_weight + "\n"); // TESTING CODE
-            }
-        }
-        u2RocketWeights.add(total_weight); // adds last U-2 rocket weight to "u2RocketWeights"
-        System.out.println("Phase 2: " + u2RocketWeights); // TESTING CODE
+        System.out.println(u2RocketWeights); // TESTING CODE
         return u2RocketWeights;
     }
 }
