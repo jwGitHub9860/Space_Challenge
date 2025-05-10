@@ -78,7 +78,7 @@ public class Simulation {
             landSuccess = item.rocket.land(); // calls "land" method
 
             int u1Cost = 100000000; // U-1 rocket cost in $
-            int u2Cost = 120; // in Millions $
+            int u2Cost = 120000000; // in Millions $
 
             while (!launchSuccess){
                 launchSuccess = item.rocket.launch(); // calls "launch" method
