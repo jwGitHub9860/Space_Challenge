@@ -65,7 +65,6 @@ public class Item {
         }
     }
     public class U2 extends Rocket{
-        int cost = 120; // in Millions $
         int launch_explosion_chance = 4; // % * (cargo carried / cargo limit)
         int landing_crash_chance = 8; // % * (cargo carried / cargo limit)
 
