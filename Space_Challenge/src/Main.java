@@ -20,7 +20,7 @@ public class Main {
 
         Simulation.loadItems(file1, file2, itemList); // calls "loadItems" method
         Simulation.loadU1(itemList, u1Rockets, u1RocketWeights); // calls "loadU1" method
-
+        Simulation.loadU2(itemList, u2Rockets, u2RocketWeights); // calls "loadU2" method
 
         //System.out.println("result1: " + item.result1); // TESTING CODE
         //System.out.println("result2: " + item.result2 + "\n"); // TESTING CODE
