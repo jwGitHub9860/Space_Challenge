@@ -36,7 +36,7 @@ public class Simulation {
         for (int num : u1Rockets) {
             System.out.println("Weight start: " + total_weight); // TESTING CODE
             System.out.println("num: " + num); // TESTING CODE
-            total_weight += item.rocket.carry(num, total_weight);
+            total_weight = item.rocket.carry(num, total_weight);
             System.out.println("Weight ADDED: " + total_weight); // TESTING CODE
             boolean allowCarry = item.rocket.canCarry(num, 10, 18000);
             System.out.println("Weight Allowed: " + total_weight); // TESTING CODE
