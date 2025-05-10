@@ -14,15 +14,20 @@ public class Main {
         // Create ArrayLists for rockets
         ArrayList<String> itemList = new ArrayList<String>();
         ArrayList<Integer> u1Rockets = new ArrayList<Integer>();
-        ArrayList<Integer> u1RocketWeights = new ArrayList<Integer>();
+        ArrayList<Integer> u1RocketWeights = new ArrayList<Integer>(); // holds weights of each U-1 rocket needed
         ArrayList<Integer> u2Rockets = new ArrayList<Integer>();
-        ArrayList<Integer> u2RocketWeights = new ArrayList<Integer>();
+        ArrayList<Integer> u2RocketWeights = new ArrayList<Integer>(); // holds weights of each U-2 rocket needed
+
+        // Create Doubles for rocket budgets
+        double u1BudgetTotal = 0;
+        double u2BudgetTotal = 0;
 
         Simulation.loadItems(file1, file2, itemList); // calls "loadItems" method
         Simulation.loadU1(itemList, u1Rockets, u1RocketWeights); // calls "loadU1" method
         Simulation.loadU2(itemList, u2Rockets, u2RocketWeights); // calls "loadU2" method
+        Simulation.runSimulation(u1RocketWeights, u2RocketWeights, u1BudgetTotal, u2BudgetTotal); // calls "runSimulation" method
 
-        //System.out.println("result1: " + item.result1); // TESTING CODE
-        //System.out.println("result2: " + item.result2 + "\n"); // TESTING CODE
+        System.out.println("U-1 Total Budget: $" + u1BudgetTotal); // displays U-1 Total Budget
+        System.out.println("U-2 Total Budget: $" + u2BudgetTotal); // displays U-2 Total Budget
     }
 }
