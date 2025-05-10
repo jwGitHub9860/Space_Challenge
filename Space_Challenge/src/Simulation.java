@@ -22,7 +22,7 @@ public class Simulation {
     }
     public static ArrayList<Integer> loadU1(ArrayList<String> itemList, ArrayList<Integer> u1Rockets, ArrayList<Integer> u1RocketWeights) {
         Item item = new Item(); // creates "Items" object to access "Item.java" java file
-        Item i = new Item();
+
         // Extract ONLY ITEM WEIGHT AMOUNTS & put them in "u1Rockets"
         for (String line : itemList){
             String data = line.replaceAll("[^0-9]", ""); // MUST REMOVE Letters from String BEFORE PUTTING them into ArrayList<Integer> or Error Will Occur
