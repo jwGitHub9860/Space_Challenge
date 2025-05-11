@@ -29,8 +29,8 @@ public class Main {
         Simulation.loadItems(file1, file2, itemList); // calls "loadItems" method
         Simulation.loadU1(itemList, u1Rockets, u1RocketWeights); // calls "loadU1" method
         Simulation.loadU2(itemList, u2Rockets, u2RocketWeights); // calls "loadU2" method
-        Simulation.runSimulation(18000, u1RocketWeights, u1BudgetTotal); // calls "runSimulation" method
-        Simulation.runSimulation(29000, u2RocketWeights, u2BudgetTotal); // calls "runSimulation" method
+        Simulation.runSimulation(u1Cost,18000, u1RocketWeights, u1BudgetTotal); // calls "runSimulation" method
+        Simulation.runSimulation(u2Cost,29000, u2RocketWeights, u2BudgetTotal); // calls "runSimulation" method
 
         System.out.println("U-1 Total Budget: $" + u1BudgetTotal); // displays U-1 Total Budget
         System.out.println("U-2 Total Budget: $" + u2BudgetTotal); // displays U-2 Total Budget

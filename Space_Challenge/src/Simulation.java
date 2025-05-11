@@ -67,7 +67,7 @@ public class Simulation {
         u2RocketWeights.add(total_weight); // adds last U-2 rocket weight to "u2RocketWeights"
         return u2RocketWeights;
     }
-    public static double runSimulation(int maxWeight, ArrayList<Integer>rocketWeights, double rocketBudgetTotal){
+    public static double runSimulation(int rocketCost, int maxWeight, ArrayList<Integer>rocketWeights, double rocketBudgetTotal){
         Item item = new Item(); // creates "Items" object to access "Item.java" java file
         boolean launchSuccess = false; // confirms if rocket launch was successful
         boolean landSuccess = false; // confirms if rocket landing was successful
