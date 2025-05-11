@@ -2,7 +2,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Simulation {
     public static ArrayList<String> loadItems(File file1, File file2, ArrayList<String> itemList) throws IOException {

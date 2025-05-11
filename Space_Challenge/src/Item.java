@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Item {
     String name;
     int weight;
