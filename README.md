@@ -20,6 +20,8 @@ Ben Crazed Up Euden. "How to Take Numbers from a String and Put Them into an Arr
 
 Comment. “Extract All Integers from the given String in Java.” _GeeksforGeeks_, 21 Nov. 2024, www.geeksforgeeks.org/extract-all-integers-from-the-given-string-in-java/. Accessed 8 May 2025.
 
+"How Do I Print a Double Value without Scientific Notation Using Java?" _Stack Overflow_, stackoverflow.com/questions/16098046/how-do-i-print-a-double-value-without-scientific-notation-using-java. Accessed 10 May 2025. 
+
 “Java Multiple Inheritance.” _GeeksforGeeks_, GeeksforGeeks, 26 Dec. 2024, www.geeksforgeeks.org/java-and-multiple-inheritance/. Accessed 10 May 2025.
 
 “Java Pattern Class.” _GeeksforGeeks_, GeeksforGeeks, 15 Dec. 2024, www.geeksforgeeks.org/pattern-class-in-java/. Accessed 8 May 2025.
