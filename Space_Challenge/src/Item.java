@@ -30,7 +30,7 @@ public class Item {
         boolean canCarry(int weight, int max_weight);
         int carry(int num, int weight); // updates current weight
     }
-    public class U1 extends Rocket{
+    public static class U1 extends Rocket{
         // Override "launch" method in "Rocket" class
         @Override
         public boolean launch(int rocketWeight, int maxWeight) { // Determines if rocket will crash, explode, or neither
@@ -59,7 +59,7 @@ public class Item {
             }
         }
     }
-    public class U2 extends Rocket{
+    public static class U2 extends Rocket{
         // Override "launch" method in "Rocket" class
         @Override
         public boolean launch(int rocketWeight, int maxWeight) { // Determines if rocket will crash, explode, or neither
