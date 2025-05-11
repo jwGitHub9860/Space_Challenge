@@ -79,7 +79,7 @@ public class Simulation {
             System.out.println("launchSuccess: " + launchSuccess); // TESTING CODE
             System.out.println("\nlandSuccess: " + landSuccess); // TESTING CODE
 
-
+            // Relaunch rocket if it fails to launch or land
             while (!launchSuccess || !landSuccess){
                 launchSuccess = item.rocket.launch(num, maxWeight); // calls "launch" method
                 landSuccess = item.rocket.land(num, maxWeight); // calls "land" method
