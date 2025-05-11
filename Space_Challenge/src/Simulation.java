@@ -76,8 +76,8 @@ public class Simulation {
         for (int num : rocketWeights) {
             launchSuccess = item.rocket.launch(num, maxWeight); // calls "launch" method
             landSuccess = item.rocket.land(num, maxWeight); // calls "land" method
-            System.out.println("launchSuccess: " + launchSuccess); // TESTING CODE
-            System.out.println("\nlandSuccess: " + landSuccess); // TESTING CODE
+
+            rocketBudgetTotal += rocketCost; // adds rocket cost to total rocket budget
 
             // Relaunch rocket if it fails to launch or land
             while (!launchSuccess || !landSuccess){
