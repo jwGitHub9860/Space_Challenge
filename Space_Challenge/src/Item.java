@@ -60,11 +60,32 @@ public class Item {
         }
     }
     public class U2 extends Rocket{
-        int launch_explosion_chance = 4; // % * (cargo carried / cargo limit)
-        int landing_crash_chance = 8; // % * (cargo carried / cargo limit)
+        // Override "launch" method in "Rocket" class
+        @Override
+        public boolean launch(int rocketWeight, int maxWeight) { // Determines if rocket will crash, explode, or neither
+            // Calculates Launch Failure Percentage
+            double failureChance = 0.04 * ((double) rocketWeight / maxWeight); // 4% * (cargo carried / cargo limit)
 
-        // Determines if "U-2" rocket will crash, explode, or neither
-        Random r = new Random(); // creates "Random" object
-        int result = r.nextInt(100) + 1; // "+ 1" ensures number will be within range of "0-100"
+            // Indicates if "launch" was Successful or Not
+            if (Math.random() <= failureChance) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // Override "land" method in "Rocket" class
+        @Override
+        public boolean land(int rocketWeight, int maxWeight) { // Determines if rocket will crash, explode, or neither
+            // Calculates Land Failure Percentage
+            double failureChance = 0.08 * ((double) rocketWeight / maxWeight); // 8% * (cargo carried / cargo limit)
+
+            // Indicates if "land" was Successful or Not through "launch" result
+            if (Math.random() <= failureChance) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 }
