@@ -18,6 +18,10 @@ public class Main {
         ArrayList<Integer> u2Rockets = new ArrayList<Integer>();
         ArrayList<Integer> u2RocketWeights = new ArrayList<Integer>(); // holds weights of each U-2 rocket needed
 
+        // Cost for each Rocket
+        int u1Cost = 100000000; // U-1 rocket cost in $
+        int u2Cost = 120000000; // U-2 rocket cost in $
+
         // Create Doubles for rocket budgets
         double u1BudgetTotal = 0;
         double u2BudgetTotal = 0;

@@ -78,8 +78,7 @@ public class Simulation {
             landSuccess = item.rocket.land(num, maxWeight); // calls "land" method
             System.out.println("launchSuccess: " + launchSuccess); // TESTING CODE
             System.out.println("\nlandSuccess: " + landSuccess); // TESTING CODE
-            int u1Cost = 100000000; // U-1 rocket cost in $
-            int u2Cost = 120000000; // U-2 rocket cost in $
+
 
             while (!launchSuccess || !landSuccess){
                 launchSuccess = item.rocket.launch(num, maxWeight); // calls "launch" method
