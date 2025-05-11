@@ -71,12 +71,13 @@ public class Simulation {
         Item item = new Item(); // creates "Items" object to access "Item.java" java file
         boolean launchSuccess = false; // confirms if rocket launch was successful
         boolean landSuccess = false; // confirms if rocket landing was successful
-        System.out.println("launchSuccess: " + launchSuccess); // TESTING CODE
-        System.out.println("\nrocketWeights.size(): " + rocketWeights.size()); // TESTING CODE
+
+        // Finds Total Rocket Budget
         for (int num : rocketWeights) {
             launchSuccess = item.rocket.launch(num, maxWeight); // calls "launch" method
             landSuccess = item.rocket.land(num, maxWeight); // calls "land" method
-
+            System.out.println("launchSuccess: " + launchSuccess); // TESTING CODE
+            System.out.println("\nlandSuccess: " + landSuccess); // TESTING CODE
             int u1Cost = 100000000; // U-1 rocket cost in $
             int u2Cost = 120000000; // U-2 rocket cost in $
 
