@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Main {
@@ -30,6 +31,14 @@ public class Main {
         Simulation.loadU2(itemList, u2Rockets, u2RocketWeights); // calls "loadU2" method
         u1BudgetTotal = Simulation.runSimulation(u1Cost,18000, u1RocketWeights, u1BudgetTotal); // calls "runSimulation" method
         u2BudgetTotal = Simulation.runSimulation(u2Cost,29000, u2RocketWeights, u2BudgetTotal); // calls "runSimulation" method
+
+        // Change U-1 rocket budget total into non-exponential numbers
+        BigDecimal bigDecimal1 = new BigDecimal(u1BudgetTotal);
+        String u1TotalBudget = bigDecimal1.toPlainString();
+
+        // Change U-2 rocket budget total into non-exponential numbers
+        BigDecimal bigDecimal2 = new BigDecimal(u2BudgetTotal);
+        String u2TotalBudget = bigDecimal2.toPlainString();
 
         System.out.println("U-1 Total Budget: $" + u1BudgetTotal); // displays U-1 Total Budget
         System.out.println("U-2 Total Budget: $" + u2BudgetTotal); // displays U-2 Total Budget
