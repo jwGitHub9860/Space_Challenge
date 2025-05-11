@@ -40,7 +40,7 @@ public class Main {
         BigDecimal bigDecimal2 = new BigDecimal(u2BudgetTotal);
         String u2TotalBudget = bigDecimal2.toPlainString();
 
-        System.out.println("U-1 Total Budget: $" + u1BudgetTotal); // displays U-1 Total Budget
-        System.out.println("U-2 Total Budget: $" + u2BudgetTotal); // displays U-2 Total Budget
+        System.out.println("U-1 Total Budget: $" + u1TotalBudget); // displays U-1 Total Budget
+        System.out.println("U-2 Total Budget: $" + u2TotalBudget); // displays U-2 Total Budget
     }
 }
