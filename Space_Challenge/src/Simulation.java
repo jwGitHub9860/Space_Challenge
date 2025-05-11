@@ -80,7 +80,7 @@ public class Simulation {
             int u1Cost = 100000000; // U-1 rocket cost in $
             int u2Cost = 120000000; // U-2 rocket cost in $
 
-            while (!launchSuccess){
+            while (!launchSuccess || !landSuccess){
                 launchSuccess = item.rocket.launch(num, maxWeight); // calls "launch" method
                 landSuccess = item.rocket.land(num, maxWeight); // calls "land" method
             }
