@@ -5,10 +5,10 @@ public class Item {
     int weight;
     Rocket rocket = new Rocket();  // creates "Rocket" object to access "Rocket" class in "Simulation.java" java file
     public static class Rocket implements Spaceship {
-        public boolean launch(){ // indicates if "launch" was Successful or Not
+        public boolean launch(int rocketWeight, int maxWeight){ // indicates if "launch" was Successful or Not
             return true;
         }
-        public boolean land(){ // indicates if "land" was Successful or Not through "launch" result
+        public boolean land(int rocketWeight, int maxWeight){ // indicates if "land" was Successful or Not through "launch" result
             return true;
         }
         public boolean canCarry(int weight, int max_weight){ // checks if total rocket weight exceeds maximum weight limit
@@ -25,24 +25,20 @@ public class Item {
         }
     }
     public interface Spaceship {
-        boolean launch(); // indicates if "launch" was Successful or Not
-        boolean land(); // indicates if "land" was Successful or Not through "launch" result
+        boolean launch(int rocketWeight, int maxWeight); // indicates if "launch" was Successful or Not
+        boolean land(int rocketWeight, int maxWeight); // indicates if "land" was Successful or Not through "launch" result
         boolean canCarry(int weight, int max_weight);
         int carry(int num, int weight); // updates current weight
     }
     public class U1 extends Rocket{
-        int launch_explosion_chance = 5; // % * (cargo carried / cargo limit)
-        int landing_crash_chance = 1; // % * (cargo carried / cargo limit)
-
         // Override "launch" method in "Rocket" class
         @Override
-        public boolean launch() {
-            // Determines if "U-1" rocket will crash, explode, or neither
-            Random r = new Random(); // creates "Random" object
-            int random_num = r.nextInt(100) + 1; // "+ 1" ensures number will be within range of "0-100"
+        public boolean launch(int rocketWeight, int maxWeight) { // Determines if rocket will crash, explode, or neither
+            // Calculates Launch Failure Percentage
+            double failureChance = 0.05 * ((double) rocketWeight / maxWeight); // 5% * (cargo carried / cargo limit)
 
             // Indicates if "launch" was Successful or Not
-            if (random_num < 5) { //  MUST if STATEMENT CONDITION
+            if (Math.random() <= failureChance) {
                 return true;
             } else {
                 return false;
@@ -51,13 +47,12 @@ public class Item {
 
         // Override "land" method in "Rocket" class
         @Override
-        public boolean land() {
-            // Determines if "U-1" rocket will crash, explode, or neither
-            Random r = new Random(); // creates "Random" object
-            int random_num = r.nextInt(100) + 1; // "+ 1" ensures number will be within range of "0-100"
+        public boolean land(int rocketWeight, int maxWeight) { // Determines if rocket will crash, explode, or neither
+            // Calculates Land Failure Percentage
+            double failureChance = 0.01 * ((double) rocketWeight / maxWeight); // 1% * (cargo carried / cargo limit)
 
             // Indicates if "land" was Successful or Not through "launch" result
-            if (random_num == 1) { //  MUST if STATEMENT CONDITION
+            if (Math.random() <= failureChance) {
                 return true;
             } else {
                 return false;

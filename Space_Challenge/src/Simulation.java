@@ -67,22 +67,22 @@ public class Simulation {
         u2RocketWeights.add(total_weight); // adds last U-2 rocket weight to "u2RocketWeights"
         return u2RocketWeights;
     }
-    public static double runSimulation(ArrayList<Integer>rocketWeights, double rocketBudgetTotal){
+    public static double runSimulation(int maxWeight, ArrayList<Integer>rocketWeights, double rocketBudgetTotal){
         Item item = new Item(); // creates "Items" object to access "Item.java" java file
         boolean launchSuccess = false; // confirms if rocket launch was successful
         boolean landSuccess = false; // confirms if rocket landing was successful
         System.out.println("launchSuccess: " + launchSuccess); // TESTING CODE
         System.out.println("\nrocketWeights.size(): " + rocketWeights.size()); // TESTING CODE
-        for (int num = 0; num < rocketWeights.size(); num++) {
-            launchSuccess = item.rocket.launch(); // calls "launch" method
-            landSuccess = item.rocket.land(); // calls "land" method
+        for (int num : rocketWeights) {
+            launchSuccess = item.rocket.launch(num, maxWeight); // calls "launch" method
+            landSuccess = item.rocket.land(num, maxWeight); // calls "land" method
 
             int u1Cost = 100000000; // U-1 rocket cost in $
             int u2Cost = 120000000; // U-2 rocket cost in $
 
             while (!launchSuccess){
-                launchSuccess = item.rocket.launch(); // calls "launch" method
-                item.rocket.land(); // calls "land" method
+                launchSuccess = item.rocket.launch(num, maxWeight); // calls "launch" method
+                landSuccess = item.rocket.land(num, maxWeight); // calls "land" method
             }
         }
         return rocketBudgetTotal;
